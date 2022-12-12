@@ -11,7 +11,7 @@ $(document).ready(function () {
   $("#form").submit(function () {
     let values = $("#form").serialize();
     $(".chatbot-body").append(
-      ' <div class="chatbot-question"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@3168c460095e8c5d3fa1f383cb0b61bd8ac31c6c/public/user.jpg" /> </div> <div class="chatbot-text"> <p>' +
+      ' <div class="chatbot-question"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@ceeb2ee66ae6d98ae0a1939df3601606852390f2/public/user.jpg" /> </div> <div class="chatbot-text"> <p>' +
         $("#prompt").val() +
         "</p> </div> </div>"
     );
@@ -22,7 +22,7 @@ $(document).ready(function () {
       data: values,
       success: function (data) {
         $(".chatbot-body").append(
-          ' <div class="chatbot-question bot-ans"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@3168c460095e8c5d3fa1f383cb0b61bd8ac31c6c/public/david.jpg" /> </div> <div class="chatbot-text"> <p>' +
+          ' <div class="chatbot-question bot-ans"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@ceeb2ee66ae6d98ae0a1939df3601606852390f2/public/david.jpg" /> </div> <div class="chatbot-text"> <p>' +
             data[0].text +
             "</p> </div> </div>"
         );
