@@ -182,7 +182,7 @@
         );
         $("#prompt").val("");
         $.ajax({
-          url: $("#form").attr("action"),
+          url: "https://chatbot-benito-david.herokuapp.com/",
           type: "POST",
           data: values,
           success: function (data) {
