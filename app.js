@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
+require("dotenv").config();
 
 const { Configuration, OpenAIApi } = require("openai");
 
@@ -24,7 +25,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/index.html"));
+  res.sendFile(path.join(__dirname + "/test.html"));
 });
 
 app.post("/", async (req, res) => {
@@ -37,7 +38,7 @@ app.listen(port, () => {
 });
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
