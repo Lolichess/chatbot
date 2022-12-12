@@ -7,11 +7,11 @@ const cors = require("cors");
 
 const { Configuration, OpenAIApi } = require("openai");
 
-app.options("*", cors());
+/*app.options("*", cors());*/
 
 app.use(express.static("public"));
 
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     return res.status(200).json({});
   }
   next();
-});
+});*/
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
