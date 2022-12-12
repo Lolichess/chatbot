@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.chatbot-icon img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.chatbot-msg {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #ccc;
+  position: absolute;
+  top: -80px;
+  width: 300px;
+  right: 40px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+
+.chatbot-msg p {
+  color: #000;
+}
+
+.chatbot-msg .chatbot-close {
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: end;
+}
+
+.chatbot {
+  width: 400px;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  transition: transform 0.5s ease 0s;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  display: none;
+}
+
+.chatbot-body {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.chatbot-question {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.chatbot-question .chatbot-img {
+  width: 48px;
+}
+.chatbot-question .chatbot-img img {
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+.chatbot-submit {
+  bottom: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+.chatbot-submit input {
+  height: 40px;
+  border: 1px solid #3498db;
+  width: 100%;
+  outline-color: #3498db;
+  padding: 0px 8px;
+}
+
+.bot-ans {
+  flex-direction: row-reverse;
+}
+
+.bot-ans .chatbot-text {
+  background: #3498db;
+  color: #fff;
+}
+
+.chatbot-text {
+  background: #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.chatbot-submit form {
+  display: flex;
+  gap: 6px;
+}
+.chatbot-submit form button {
+  border: 0;
+  background: url("/send.png");
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.chatbot-close-body {
+  display: flex;
+  justify-content: end;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .chatbot-body {
+    width: calc(100% - 40px);
+    height: 180px;
+  }
+
+  .chatbot {
+    width: calc(100% - 40px);
+    bottom: 0px;
+    right: 0;
+  }
+}
