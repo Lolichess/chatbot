@@ -3,15 +3,12 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
-const cors = require("cors");
 
 const { Configuration, OpenAIApi } = require("openai");
 
-/*app.options("*", cors());*/
-
 app.use(express.static("public"));
 
-/*app.use((req, res, next) => {
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -22,7 +19,7 @@ app.use(express.static("public"));
     return res.status(200).json({});
   }
   next();
-});*/
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -40,7 +37,7 @@ app.listen(port, () => {
 });
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
