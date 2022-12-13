@@ -144,7 +144,7 @@
   }
 
   .chatbot {
-    width: calc(100% - 120px);
+    width: 250px;
     bottom: 0px;
     margin: 0 auto;
     position: sticky;
