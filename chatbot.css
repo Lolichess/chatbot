@@ -139,12 +139,12 @@
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .chatbot-body {
-    width: calc(100% - 40px);
+    width: 180px;
     height: 180px;
   }
 
   .chatbot {
-    width: 250px;
+    width: 220px;
     bottom: 0px;
     margin: 0 auto;
     position: sticky;
