@@ -92,7 +92,7 @@
   width: 48px;
 }
 .chatbot-question .chatbot-img img {
-  width: 100%;
+  width: 38px;
   object-fit: cover;
   border: 2px solid #ccc;
   border-radius: 50%;
