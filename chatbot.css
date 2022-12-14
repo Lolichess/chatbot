@@ -55,6 +55,12 @@
   justify-content: end;
 }
 
+.chatbot-writing {
+  font-size: 12px;
+  color: #bbb;
+  display: none;
+}
+
 .chatbot {
   width: 350px;
   position: fixed;
