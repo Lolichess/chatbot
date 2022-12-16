@@ -40,6 +40,7 @@ $(document).ready(function () {
             "</p> </div> </div>"
         );
         $(".chatbot-writing").css("display", "none");
+        $(".chatbot-body").scrollTop($(".chatbot-body")[0].scrollHeight);
       },
     });
     return false;
