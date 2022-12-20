@@ -21,7 +21,11 @@ $(document).ready(function () {
   });
 
   $("#form").submit(function () {
-    let values = "prompt=" + encodeURIComponent($("#prompt").val());
+    let values =
+      "prompt=" +
+      encodeURIComponent(
+        "Human: " + $("#prompt").val() + "\nBenito Pérez Galdós:"
+      );
     $(".chatbot-body").append(
       ' <div class="chatbot-question"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@ceeb2ee66ae6d98ae0a1939df3601606852390f2/public/user.jpg" /> </div> <div class="chatbot-text"> <p>' +
         $("#prompt").val() +
