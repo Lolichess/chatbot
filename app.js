@@ -46,7 +46,7 @@ const openai = new OpenAIApi(configuration);
 getValue = async (prompt) => {
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: "Human: " + prompt + "\nBenito Pérez Galdós:",
+    prompt: prompt,
     temperature: 0.9,
     max_tokens: 300,
     top_p: 1,
