@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("body").append(
-    ' <div class="chatbot-icon"> <div class="chatbot-msg"> <div class="chatbot-close-body"> <div class="chatbot-close">x</div> </div> <p>Soy Benito Pérez Galdós puedes preguntar cualquier duda sobre mi?</p> </div> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@4860a762fc05d811b7565459975414ac17fba85a/public/perez_galdos_benito.jpg" /> </div><div class="chatbot"><div class="chatbot-header"><div class="chatbot-minimize"></div></div> <div class="chatbot-body"></div> <div class="chatbot-submit"><div class="question-relative"><div class="question">¿Qué es Web 3?</div><div class="question">¿Qué es AI generativa?</div><div class="question">¿Cómo puedo orientar mi carrera hacia Blockchain?</div></div><div class="chatbot-writing">Benito Pérez Galdós escribiendo...</div> <form id="form" method="POST"> <input type="text" name="prompt" id="prompt" autocomplete="off" /> <button type="submit"></button> </form> </div> </div>'
+    ' <div class="chatbot-icon"> <div class="chatbot-msg"> <div class="chatbot-close-body"> <div class="chatbot-close">x</div> </div> <p>Soy Benito Pérez Galdós puedes preguntar cualquier duda sobre mi?</p> </div> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@4c753f8ae8fadc024e3584a15c885b9f0566c43f/public/david.jpg" /> </div><div class="chatbot"><div class="chatbot-header"><div class="chatbot-minimize"></div></div> <div class="chatbot-body"></div> <div class="chatbot-submit"><div class="question-relative"><div class="question">¿Qué es Web 3?</div><div class="question">¿Qué es AI generativa?</div><div class="question">¿Cómo puedo orientar mi carrera hacia Blockchain?</div></div><div class="chatbot-writing">Benito Pérez Galdós escribiendo...</div> <form id="form" method="POST"> <input type="text" name="prompt" id="prompt" autocomplete="off" /> <button type="submit"></button> </form> </div> </div>'
   );
 
   $(".chatbot-icon").click(function (e) {
@@ -39,7 +39,7 @@ $(document).ready(function () {
       data: values,
       success: function (data) {
         $(".chatbot-body").append(
-          ' <div class="chatbot-question bot-ans"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@4860a762fc05d811b7565459975414ac17fba85a/public/perez_galdos_benito.jpg" /> </div> <div class="chatbot-text"> <p>' +
+          ' <div class="chatbot-question bot-ans"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@4c753f8ae8fadc024e3584a15c885b9f0566c43f/public/david.jpg" /> </div> <div class="chatbot-text"> <p>' +
             data[0].text +
             "</p> </div> </div>"
         );
