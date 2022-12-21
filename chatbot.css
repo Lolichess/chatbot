@@ -145,6 +145,25 @@
   display: flex;
   justify-content: end;
 }
+
+.question-relative {
+  position: absolute;
+  bottom: 50px;
+}
+
+.chatbot-submit {
+  position: relative;
+}
+
+.question {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 5px;
+  margin: 0px 0px 10px;
+  cursor: pointer;
+  background: #ccc;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .chatbot-body {
     width: 180px;
