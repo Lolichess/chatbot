@@ -31,7 +31,7 @@ $(document).ready(function () {
         "</p> </div> </div>"
     );
     $("#prompt").val("");
-    $(".question-relative").css("display", "none");
+    $(this).parent().css("display", "none");
     $(".chatbot-writing").css("display", "block");
     $.ajax({
       url: "https://chatbot-benito-david.herokuapp.com/",
@@ -61,7 +61,7 @@ $(document).ready(function () {
         "</p> </div> </div>"
     );
     $("#prompt").val("");
-    $(this).parent().css("display", "none");
+    $(".question-relative").css("display", "none");
     $(".chatbot-writing").css("display", "block");
     $.ajax({
       url: "https://chatbot-benito-david.herokuapp.com/",
