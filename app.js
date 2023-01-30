@@ -2,14 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 require("dotenv").config();
 
 const { Configuration, OpenAIApi } = require("openai");
 
 app.use(express.static("public"));
 
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -20,9 +20,17 @@ app.use((req, res, next) => {
     return res.status(200).json({});
   }
   next();
-});
+});*/
 
-app.use(bodyParser.urlencoded({ extended: true }));
+/*app.use(bodyParser.urlencoded({ extended: true }));*/
+
+app.use(bodyParser.json());
+
+/*
+app.use(bodyParser.urlencoded({ extended: false }));*/
+
+var cors = require("cors");
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/test.html"));
@@ -48,7 +56,7 @@ getValue = async (prompt) => {
     model: "text-davinci-003",
     prompt: prompt,
     temperature: 0.9,
-    max_tokens: 500,
+    max_tokens: 300,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0.6,
