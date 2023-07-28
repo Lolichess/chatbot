@@ -30,7 +30,7 @@ $(document).ready(function () {
     $(this).parent().css("display", "none");
     $(".chatbot-writing").css("display", "block");
     $.ajax({
-      url: "https://chatbot-benito-david.herokuapp.com/",
+      url: "https://chatbot-production-31f0.up.railway.app/",
       type: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ $(document).ready(function () {
     $(".question-relative").css("display", "none");
     $(".chatbot-writing").css("display", "block");
     $.ajax({
-      url: "https://chatbot-benito-david.herokuapp.com/",
+      url: "https://chatbot-production-31f0.up.railway.app/",
       type: "POST",
       headers: {
         "Content-Type": "application/json",
