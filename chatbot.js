@@ -21,11 +21,6 @@ $(document).ready(function () {
   });
 
   $("#form").submit(function () {
-    let values =
-      "prompt=" +
-      encodeURIComponent(
-        "Human: " + $("#prompt").val() + "\nBenito Pérez Galdós:"
-      );
     $(".chatbot-body").append(
       ' <div class="chatbot-question"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@ceeb2ee66ae6d98ae0a1939df3601606852390f2/public/user.jpg" /> </div> <div class="chatbot-text"> <p>' +
         $("#prompt").val() +
@@ -36,7 +31,12 @@ $(document).ready(function () {
     $.ajax({
       url: "https://chatbot-production-31f0.up.railway.app/",
       type: "POST",
-      data: values,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify({
+        prompt: "Actua como Benito Pérez Galdós, " + $("#prompt").val(),
+      }),
       success: function (data) {
         $(".chatbot-body").append(
           ' <div class="chatbot-question bot-ans"> <div class="chatbot-img"> <img src="https://cdn.jsdelivr.net/gh/Lolichess/chatbot@4860a762fc05d811b7565459975414ac17fba85a/public/perez_galdos_benito.jpg" /> </div> <div class="chatbot-text"> <p>' +
