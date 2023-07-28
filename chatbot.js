@@ -35,7 +35,7 @@ $(document).ready(function () {
         "Content-Type": "application/json",
       },
       data: JSON.stringify({
-        prompt: "Actua como Benito Pérez Galdós, " + $("#prompt").val(),
+        prompt: "Humano: " + $("#prompt").val() + "\nBenito Pérez Galdós:",
       }),
       success: function (data) {
         $(".chatbot-body").append(
